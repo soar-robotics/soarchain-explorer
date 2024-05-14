@@ -1,0 +1,22 @@
+{
+    "chain_name": "soarchain",
+    "api": ["https://rpc1.testnet.soarchain.com/api"],
+    "rpc": ["https://rpc1.testnet.soarchain.com"],
+    "sdk_version": "0.45.5",
+    "coin_type": "118",
+    "min_tx_fee": "500",
+    "assets": [
+      {
+        "base": "utsoar",
+        "symbol": "TSOAR",
+        "exponent": 6,
+        "coingecko_id": "",
+        "logo": "https://pbs.twimg.com/profile_images/1681943775612993536/g2zgtZ53_400x400.jpg"
+      }
+    ],
+    "addr_prefix": "soar",
+    "theme_color": "#9932CC",
+    "logo": "https://pbs.twimg.com/profile_images/1681943775612993536/g2zgtZ53_400x400.jpg"
+  }
+  
+
