@@ -80,9 +80,9 @@ dayjs()
     >
       <div class="flex justify-between mt-1 pl-4 py-4 mb-1">
         <RouterLink to="/" class="flex items-center">
-          <img class="w-10 h-10" src="../../assets/logo.svg" />
+          <img class="w-10 h-10" src="/public/soarchain_icon.svg" />
           <h1 class="flex-1 ml-3 text-2xl font-semibold dark:text-white">
-            Ping.pub
+            Soarchain
           </h1>
         </RouterLink>
         <div
@@ -238,10 +238,10 @@ dayjs()
               Wallet Helper
             </div>
           </RouterLink>
-          <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">
+          <!-- <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">
           {{ $t('module.sponsors') }}
-        </div>
-        <a
+        </div> -->
+        <!-- <a
           href="https://osmosis.zone"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
@@ -255,8 +255,8 @@ dayjs()
           >
             Osmosis
           </div>
-        </a>
-        <a
+        </a> -->
+        <!-- <a
           href="https://celestia.org"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
@@ -270,8 +270,8 @@ dayjs()
           >
             Celestia
           </div>
-        </a>
-        <a
+        </a> -->
+        <!-- <a
           href="https://becole.com"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
@@ -285,10 +285,10 @@ dayjs()
           >
             Becole
           </div>
-        </a>
+        </a> -->
         <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">{{ $t('module.links') }}</div>
         <a
-          href="https://twitter.com/ping_pub"
+          href="https://twitter.com/soar_chain"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
@@ -300,8 +300,7 @@ dayjs()
           </div>
         </a>
         <a
-          v-if="showDiscord"
-          href="https://discord.com/invite/CmjYVSr6GW"
+          href="https://discord.gg/cFA6CBHY"
           target="_blank"
           class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
@@ -313,15 +312,15 @@ dayjs()
           </div>
         </a>
         <a
-          href="https://github.com/ping-pub/explorer/discussions"
+          href="https://github.com/soar-robotics"
           target="_blank"
           class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
-          <Icon icon="mdi:frequently-asked-questions" class="text-xl mr-2" />
+          <Icon icon="mdi:github" class="text-xl mr-2" />
           <div
             class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
-            FAQ
+            Github
           </div>
         </a>
       </div>
