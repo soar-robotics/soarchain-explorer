@@ -12,6 +12,7 @@ import { useStakingStore } from '@/stores/useStakingStore';
 import type { Coin, Tally } from '@/types';
 import numeral from 'numeral';
 import { defineStore } from 'pinia';
+import { usePoaStore } from '@/stores/usePoaStore';
 
 export function colorMap(color: string) {
   switch (color) {
@@ -147,7 +148,7 @@ export const useIndexModule = defineStore('module-index', {
       const staking = useStakingStore();
       const mintStore = useMintStore();
       const formatter = useFormatter();
-
+      const poaStore = usePoaStore();
       return [
         {
           title: 'Height',
@@ -182,13 +183,6 @@ export const useIndexModule = defineStore('module-index', {
           change: 0,
         },
         {
-          title: 'Inflation',
-          color: 'success',
-          icon: 'mdi-chart-multiple',
-          stats: formatter.formatDecimalToPercent(mintStore.inflation),
-          change: 0,
-        },
-        {
           title: 'Community Pool',
           color: 'primary',
           icon: 'mdi-bank',
@@ -200,8 +194,16 @@ export const useIndexModule = defineStore('module-index', {
           ),
           change: 0,
         },
+        {
+          title : 'Car Count',
+          color: 'warning',
+          icon: 'mdi-car',
+          stats: String(poaStore.totalCars),
+        }
       ];
     },
+
+
 
     coingeckoId() {
       this.tickerIndex = 0;
@@ -215,6 +217,7 @@ export const useIndexModule = defineStore('module-index', {
       this.$reset();
       this.initCoingecko();
       useMintStore().fetchInflation();
+      usePoaStore().initial();
       useDistributionStore()
         .fetchCommunityPool()
         .then((x) => {
