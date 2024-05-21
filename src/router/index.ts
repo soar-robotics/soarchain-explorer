@@ -8,9 +8,12 @@ import routes from "~pages";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/soar', redirect: '/soarchain' },
     { path: '/', redirect: '/soarchain' }, 
-    ...setupLayouts(routes)
+    { 
+      path: '/soar/:pathMatch(.*)*', 
+      redirect: (to) => `/soarchain/${Array.isArray(to.params.pathMatch) ? to.params.pathMatch.join('/') : to.params.pathMatch}` 
+    },
+    ...setupLayouts(routes),
   ],
 });
 
