@@ -144,28 +144,28 @@
   
         console.log("Broadcast result:", result);
   
-        // Check if the result is successful
-        if (result && result.code === 0) {
-          isEligible.value = true;
-          transactionStatus.value = `Wallet address ${sender} was successfully joined the Runner Operator wait list.`;
-        } else {
-          transactionStatus.value = 'Transaction failed, please try again.';
-        }
-      } catch (error) {
-        console.error("Error during transaction process:", error);
-        if (error.message.includes("does not exist on chain")) {
-          transactionStatus.value = 'Account does not exist on chain. Please download the SoarchainConnect mobile app to claim your testnet coins.';
-        } else {
-          transactionStatus.value = 'Transaction failed, please try again.';
-        }
-      } finally {
-        loading.value = false;
-      }
-    } else {
-      console.log("Please install the Keplr extension.");
-      transactionStatus.value = 'Please install the Keplr extension.';
-      loading.value = false;
-    }
+// Check if the result is successful
+if (result && result.code === 0) {
+  isEligible.value = true;
+  transactionStatus.value = `Wallet address ${sender} was successfully joined the Runner Operator wait list.`;
+} else {
+  transactionStatus.value = 'Transaction failed, please try again.';
+}
+} catch (error) {
+  console.error("Error during transaction process:", error);
+  if (error instanceof Error && error.message.includes("does not exist on chain")) {
+    transactionStatus.value = 'Account does not exist on chain. Please download the SoarchainConnect mobile app to claim your testnet coins.';
+  } else {
+    transactionStatus.value = 'Transaction failed, please try again.';
+  }
+} finally {
+  loading.value = false;
+}
+} else {
+  console.log("Please install the Keplr extension.");
+  transactionStatus.value = 'Please install the Keplr extension.';
+  loading.value = false;
+}
   };
   </script>
   
