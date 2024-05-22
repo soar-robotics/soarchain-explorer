@@ -221,7 +221,7 @@ if (result && result.code === 0) {
   <route>
   {
     meta: {
-      i18n: 'runner-airdrop'
+      i18n: 'runners'
     }
   }
   </route>
