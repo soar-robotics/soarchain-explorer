@@ -21,8 +21,8 @@
     </div>
     <div v-if="transactionStatus" class="message-box">
       <p>{{ transactionStatus }}</p>
-      <p>Please copy and paste the Transaction Hash to the Zealy Quest <a href="https://zealy.io/cw/soarchain/questboard/8e8e5474-ad5b-42e0-96b6-e66754df4e9f/551501bb-00a6-4357-8592-5b79f5f63c44" target="_blank" class="zealy-link">https://zealy.io/cw/soarchain/questboard/8e8e5474-ad5b-42e0-96b6-e66754df4e9f/551501bb-00a6-4357-8592-5b79f5f63c44</a> in order to verify the task.</p>
       <p v-if="txHash">Transaction Hash: <span class="tx-hash">{{ txHash }}</span></p>
+      <p v-if="txHash">Please copy and paste the Transaction Hash to the Zealy Quest <a href="https://zealy.io/cw/soarchain/questboard/8e8e5474-ad5b-42e0-96b6-e66754df4e9f/551501bb-00a6-4357-8592-5b79f5f63c44" target="_blank"  class="zealy-link">https://zealy.io/cw/soarchain/questboard/8e8e5474-ad5b-42e0-96b6-e66754df4e9f/551501bb-00a6-4357-8592-5b79f5f63c44</a> in order to verify the task.</p>
     </div>
   </div>
 </template>
