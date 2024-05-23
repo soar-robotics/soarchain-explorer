@@ -6,7 +6,7 @@
       <p>Here's a simplified guide:</p>
       <ol>
         <li>1. Ensure you've created your Soarchain wallet via the Soarchain Connect Mobile App and have your 24-word recovery phrase ready.</li>
-        <li>2. Download the Keplr Wallet extension for your browser (<a class="blue-link" href="https://www.keplr.app/" target="_blank">keplr</a>).</li>
+        <li>2. Download the Keplr Wallet extension for your browser (<a class="blue-link" href="https://www.keplr.app/" target="_blank">https://www.keplr.app</a>).</li>
         <li>3. Import/Add your Soarchain wallet to your Keplr wallet using the 24-word recovery phrase of your Soarchain wallet.</li>
         <li>4. Click the "Send the Transaction" button. Please refresh the page if you downloaded Keplr extension but still requested to download.</li>
         <li>5. If Soarchain isn't enabled in your Keplr wallet, the Soarchain Explorer will prompt you to enable it. Please click "Approve" in the popup.</li>
@@ -21,7 +21,7 @@
     </div>
     <div v-if="transactionStatus" class="message-box">
       <p>{{ transactionStatus }}</p>
-      <p>Please copy and paste the Transaction Hash to the <a href="https://zealy.io/cw/soarchain/questboard/8e8e5474-ad5b-42e0-96b6-e66754df4e9f/551501bb-00a6-4357-8592-5b79f5f63c44" target="_blank" class="zealy-link">Zealy Quest</a> in order to verify the task.</p>
+      <p>Please copy and paste the Transaction Hash to the Zealy Quest <a href="https://zealy.io/cw/soarchain/questboard/8e8e5474-ad5b-42e0-96b6-e66754df4e9f/551501bb-00a6-4357-8592-5b79f5f63c44" target="_blank" class="zealy-link">https://zealy.io/cw/soarchain/questboard/8e8e5474-ad5b-42e0-96b6-e66754df4e9f/551501bb-00a6-4357-8592-5b79f5f63c44</a> in order to verify the task.</p>
       <p v-if="txHash">Transaction Hash: <span class="tx-hash">{{ txHash }}</span></p>
     </div>
   </div>
