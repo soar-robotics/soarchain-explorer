@@ -1,7 +1,17 @@
 {
     "chain_name": "soarchain",
-    "api": ["https://rpc1.testnet.soarchain.com/api"],
-    "rpc": ["https://rpc1.testnet.soarchain.com"],
+
+    "api": [
+      {"provider": "Soarchain", "address": "https://rpc1.testnet.soarchain.com/api"},
+      {"provider": "Kjnodes", "address": "https://soarchain-testnet.api.kjnodes.com"},
+      {"provider": "Polkachu", "address": "https://soarchain-testnet-api.polkachu.com/"}
+  ],
+  
+  "rpc": [
+    {"provider": "Soarchain", "address": "https://rpc1.testnet.soarchain.com"}, 
+    {"provider": "Kjnodes", "address": "https://soarchain-testnet.rpc.kjnodes.com"},
+    {"provider": "Polkachu", "address": "https://soarchain-testnet-rpc.polkachu.com/"}
+],
     "sdk_version": "0.45.5",
     "coin_type": "118",
     "min_tx_fee": "500",
